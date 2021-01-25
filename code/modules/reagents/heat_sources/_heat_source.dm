@@ -89,7 +89,7 @@
 			to_chat(user, SPAN_WARNING("Turn \the [src] off first!"))
 		else
 			anchored = !anchored
-			visible_message(SPAN_NOTICE("\The [user] [anchored ? "secured" : "unsecured"] \the [src]."))
+			visible_message(SPAN_NOTICE("\The [user] [anchored ? "" : "un"]secured \the [src]."))
 			playsound(src.loc, 'sound/items/Ratchet.ogg', 75, 1)
 		return
 

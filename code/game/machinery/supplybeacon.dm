@@ -50,7 +50,7 @@
 			to_chat(user, "<span class='warning'>This device must be placed over an exposed cable.</span>")
 			return
 		anchored = !anchored
-		user.visible_message("<span class='notice'>\The [user] [anchored ? "secures" : "unsecures"] \the [src].</span>")
+		user.visible_message("<span class='notice'>\The [user] [anchored ? "" : "un"]secures \the [src].</span>")
 		playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
 		return
 	return ..()

@@ -422,7 +422,7 @@ Helpers
 		if (aiPlayer.connected_robots.len)
 			var/robolist = "<b>The AI's loyal minions were:</b> "
 			for(var/mob/living/silicon/robot/robo in aiPlayer.connected_robots)
-				robolist += "[robo.name][robo.stat?" (Deactivated) (Played by: [robo.key]), ":" (Played by: [robo.key]), "]"
+				robolist += "[robo.name][robo.stat ? " (Deactivated)" : ""] (Played by: [robo.key]), "
 			to_world("[robolist]")
 
 	var/dronecount = 0

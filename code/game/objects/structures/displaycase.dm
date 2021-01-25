@@ -94,7 +94,7 @@
 	if(istype(id))
 		if(allowed(usr))
 			locked = !locked
-			to_chat(user, "\The [src] was [locked ? "locked" : "unlocked"].")
+			to_chat(user, "\The [src] was [locked ? "" : "un"]locked.")
 		else
 			to_chat(user, "\The [src]'s card reader denies you access.")
 		return

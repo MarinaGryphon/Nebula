@@ -8,7 +8,7 @@ var/list/stored_shock_by_ref = list()
 /decl/species/proc/toggle_stance(var/mob/living/carbon/human/H)
 	if(!H.incapacitated())
 		H.pulling_punches = !H.pulling_punches
-		to_chat(H, "<span class='notice'>You are now [H.pulling_punches ? "pulling your punches" : "not pulling your punches"].</span>")
+		to_chat(H, "<span class='notice'>You are now [H.pulling_punches ? "" : "not "]pulling your punches.</span>")
 
 /decl/species/proc/get_offset_overlay_image(var/spritesheet, var/mob_icon, var/mob_state, var/color, var/slot)
 

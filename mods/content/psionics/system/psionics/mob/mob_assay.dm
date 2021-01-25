@@ -60,7 +60,7 @@
 
 		if(!istype(machine))
 
-			dat += "[use_He_is] currently <b>[psi.suppressed ? "suppressing" : "not suppressing"]</b> your psychic operancy.<br>"
+			dat += "[use_He_is] currently <b>[psi.suppressed ? "" : "not "]suppressing</b> your psychic operancy.<br>"
 			dat += "[use_He_has] <b>[psi.stamina]/[psi.max_stamina]</b> psi stamina remaining.<br>"
 			dat += "<hr>"
 
@@ -90,7 +90,7 @@
 		machine.last_assay = dat
 		return
 
-	var/interface_type = machine ? /datum/browser/written : /datum/browser 
+	var/interface_type = machine ? /datum/browser/written : /datum/browser
 	var/datum/browser/popup = new interface_type(viewer, "psi_assay_\ref[src]", "Psi-Assay")
 	popup.set_content(jointext(dat,null))
 	popup.open()

@@ -315,7 +315,7 @@ var/list/turret_icons
 		//Behavior lock/unlock mangement
 		if(allowed(user))
 			locked = !locked
-			to_chat(user, "<span class='notice'>Controls are now [locked ? "locked" : "unlocked"].</span>")
+			to_chat(user, "<span class='notice'>Controls are now [locked ? "" : "un"]locked.</span>")
 			updateUsrDialog()
 		else
 			to_chat(user, "<span class='notice'>Access denied.</span>")

@@ -22,7 +22,7 @@
 		to_chat(user, "<span class='warning'>\The [src] doesn't have any cable loaded.</span>")
 		return TRUE
 	on = !on
-	user.visible_message("\The [user] [!on?"dea":"a"]ctivates \the [src].", "You switch [src] [on? "on" : "off"]")
+	user.visible_message("\The [user] [!on ? "de" : ""]activates \the [src].", "You switch [src] [on? "on" : "off"]")
 	return TRUE
 
 /obj/machinery/cablelayer/attackby(var/obj/item/O, var/mob/user)

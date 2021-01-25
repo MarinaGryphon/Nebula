@@ -178,7 +178,7 @@
 	GLOB.name_set_event.register(area, src, .proc/change_area_name)
 
 	. = ..()
-	
+
 	if (populate_parts)
 		init_round_start()
 	else
@@ -414,7 +414,7 @@
 /obj/machinery/power/apc/cannot_transition_to(state_path, mob/user)
 	if(ispath(state_path, /decl/machine_construction/wall_frame/panel_closed) && cover_removed)
 		return SPAN_NOTICE("You cannot close the cover: it was completely removed!")
-	. = ..()	
+	. = ..()
 
 /obj/machinery/power/apc/proc/force_open_panel(mob/user)
 	var/decl/machine_construction/wall_frame/panel_closed/closed_state = construct_state
@@ -469,7 +469,7 @@
 				else if(prob(50))
 					return max(..(), 1) // might unlock the panel lock instead.
 				else
-					to_chat(user, "<span class='warning'>You fail to [ locked ? "unlock" : "lock"] the APC interface.</span>")
+					to_chat(user, "<span class='warning'>You fail to [locked ? "un" : ""]lock the APC interface.</span>")
 				return 1
 
 /obj/machinery/power/apc/CanUseTopicPhysical(var/mob/user)

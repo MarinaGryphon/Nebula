@@ -479,7 +479,7 @@
 
 /mob/living/silicon/robot/bullet_act(var/obj/item/projectile/Proj)
 	..(Proj)
-	if(prob(75) && Proj.damage > 0) 
+	if(prob(75) && Proj.damage > 0)
 		spark_system.start()
 	return 2
 
@@ -627,7 +627,7 @@
 			to_chat(user, "You can't reach the wiring.")
 	else if(isScrewdriver(W) && opened && !cell)	// haxing
 		wiresexposed = !wiresexposed
-		to_chat(user, "The wires have been [wiresexposed ? "exposed" : "unexposed"].")
+		to_chat(user, "The wires have been [wiresexposed ? "" : "un"]exposed.")
 		update_icon()
 
 	else if(istype(W, /obj/item/screwdriver) && opened && cell)	// radio
@@ -650,7 +650,7 @@
 		else
 			if(allowed(usr))
 				locked = !locked
-				to_chat(user, "You [ locked ? "lock" : "unlock"] [src]'s interface.")
+				to_chat(user, "You [locked ? "" : "un"]lock [src]'s interface.")
 				update_icon()
 			else
 				to_chat(user, "<span class='warning'>Access denied.</span>")

@@ -109,7 +109,7 @@
 			to_chat(user, "[html_icon(piece)] \The [piece] [piece.gender == PLURAL ? "are" : "is"] deployed.")
 
 	if(src.loc == user)
-		to_chat(user, "The access panel is [locked? "locked" : "unlocked"].")
+		to_chat(user, "The access panel is [locked ? "" : "un"]locked.")
 		to_chat(user, "The maintenance panel is [open ? "open" : "closed"].")
 		to_chat(user, "The wire panel is [p_open ? "open" : "closed"].")
 		to_chat(user, "Hardsuit systems are [offline ? "<font color='red'>offline</font>" : "<font color='green'>online</font>"].")
@@ -277,7 +277,7 @@
 				)
 			)
 			for(var/list/piece_data in data_to_iterate)
-			
+
 				var/obj/item/piece = piece_data[1]
 				var/obj/item/compare_piece = piece_data[2]
 				var/msg_type = piece_data[3]
@@ -339,7 +339,7 @@
 		visible_name = wearer.real_name
 
 	if(wearer != initiator)
-		to_chat(initiator, "<font color='blue'>Suit adjustment complete. Suit is now [canremove ? "unsealed" : "sealed"].</font>")
+		to_chat(initiator, "<font color='blue'>Suit adjustment complete. Suit is now [canremove ? "un" : ""]sealed.</font>")
 
 	if(canremove)
 		for(var/obj/item/rig_module/module in installed_modules)

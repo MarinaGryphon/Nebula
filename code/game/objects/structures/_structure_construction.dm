@@ -10,7 +10,7 @@
 			return TRUE
 		playsound(src.loc, 'sound/items/Ratchet.ogg', 100, 1)
 		anchored = !anchored
-		visible_message(SPAN_NOTICE("\The [user] has [anchored ? "secured" : "unsecured"] \the [src] with \the [wrench]."))
+		visible_message(SPAN_NOTICE("\The [user] has [anchored ? "" : "un"]secured \the [src] with \the [wrench]."))
 		update_icon()
 		return TRUE
 	return FALSE
@@ -113,7 +113,7 @@
 		health = between(health, health + used*DOOR_REPAIR_AMOUNT, maxhealth)
 
 /obj/structure/attackby(obj/item/O, mob/user)
-	
+
 	if(O.force && user.a_intent == I_HURT)
 		attack_animation(user)
 		visible_message(SPAN_DANGER("\The [src] has been [pick(O.attack_verb)] with \the [O] by \the [user]!"))

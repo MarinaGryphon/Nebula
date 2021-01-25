@@ -53,7 +53,7 @@ var/global/list/navbeacons = list()
 		if(open)
 			if (src.allowed(user))
 				src.locked = !src.locked
-				to_chat(user, "Controls are now [src.locked ? "locked." : "unlocked."]")
+				to_chat(user, "Controls are now [src.locked ? "" : "un"]locked.")
 			else
 				to_chat(user, "<span class='warning'>Access denied.</span>")
 			updateDialog()

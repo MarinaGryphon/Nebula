@@ -53,7 +53,7 @@
 		return
 	else if(isWrench(I))
 		anchored = !anchored
-		user.visible_message("<span class='notice'>\The [user] [anchored ? "wrenches" : "unwrenches"] \the [src].</span>", "<span class='notice'>You [anchored ? "wrench" : "unwrench"] \the [src].</span>")
+		user.visible_message("<span class='notice'>\The [user] [anchored ? "" : "un"]wrenches \the [src].</span>", "<span class='notice'>You [anchored ? "" : "un"]wrench \the [src].</span>")
 		return
 	else if(istype(I, /obj/item/bee_smoker))
 		if(closed)

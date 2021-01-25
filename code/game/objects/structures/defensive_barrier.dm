@@ -138,12 +138,12 @@
 /obj/structure/defensive_barrier/attackby(obj/item/W, mob/user)
 
 	if(isScrewdriver(W) && density)
-		user.visible_message(SPAN_NOTICE("\The [user] begins to [secured ? "secure" : "unsecure"] \the [src]..."))
+		user.visible_message(SPAN_NOTICE("\The [user] begins to [secured ? "" : "un"]secure \the [src]..."))
 		playsound(src, 'sound/items/Screwdriver.ogg', 100, 1)
 		if(!do_after(user, 30, src))
 			return TRUE
 		secured = !secured
-		user.visible_message(SPAN_NOTICE("\The [user] has [secured ? "secured" : "unsecured"] \the [src]."))
+		user.visible_message(SPAN_NOTICE("\The [user] has [secured ? "" : "un"]secured \the [src]."))
 		update_icon()
 		return TRUE
 

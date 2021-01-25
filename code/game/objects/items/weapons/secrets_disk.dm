@@ -46,7 +46,7 @@
 		var/obj/item/card/id/ID = W
 		if(check_access(ID))
 			locked = !locked
-			to_chat(user, "<span class='notice'>You swipe your card and [locked ? "lock":"unlock"] the disk.</span>")
+			to_chat(user, "<span class='notice'>You swipe your card and [locked ? "" : "un"]lock the disk.</span>")
 		else
 			to_chat(user, "<span class='warning'>The disk's screen flashes 'Access Denied'.</span>")
 		return

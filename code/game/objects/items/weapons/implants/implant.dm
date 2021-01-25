@@ -97,7 +97,7 @@
 
 /obj/item/implant/proc/meltdown()	//breaks it down, making implant unrecongizible
 	if(malfunction == MALFUNCTION_PERMANENT) return
-	to_chat(imp_in, SPAN_DANGER("You feel something melting inside [part ? "your [part.name]" : "you"]!"))
+	to_chat(imp_in, SPAN_DANGER("You feel something melting inside you[part ? "r [part.name]" : ""]!"))
 	if (part)
 		part.take_external_damage(burn = 15, used_weapon = "Electronics meltdown")
 	else

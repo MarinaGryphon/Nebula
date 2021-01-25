@@ -191,7 +191,7 @@
 
 		anchored = !anchored
 		playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
-		to_chat(user, "<span class='notice'>You [anchored ? "wrench" : "unwrench"] \the [src].</span>")
+		to_chat(user, "<span class='notice'>You [anchored ? "" : "un"]wrench \the [src].</span>")
 
 		return
 	//doesn't hold tanks

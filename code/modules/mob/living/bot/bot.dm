@@ -91,7 +91,7 @@
 	if(O.GetIdCard())
 		if(access_scanner.allowed(user) && !open)
 			locked = !locked
-			to_chat(user, "<span class='notice'>Controls are now [locked ? "locked." : "unlocked."]</span>")
+			to_chat(user, "<span class='notice'>Controls are now [locked ? "" : "un"]locked.</span>")
 			Interact(usr)
 		else if(open)
 			to_chat(user, "<span class='warning'>Please close the access panel before locking it.</span>")
@@ -165,7 +165,7 @@
 
 /mob/living/bot/proc/GetInteractStatus()
 	. = "Status: <A href='?src=\ref[src];command=toggle'>[on ? "On" : "Off"]</A>"
-	. += "<BR>Behaviour controls are [locked ? "locked" : "unlocked"]"
+	. += "<BR>Behaviour controls are [locked ? "" : "un"]locked"
 	. += "<BR>Maintenance panel is [open ? "opened" : "closed"]"
 
 /mob/living/bot/proc/GetInteractPanel()

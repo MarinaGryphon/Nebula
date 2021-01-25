@@ -13,7 +13,7 @@
 	base_type = /obj/machinery/docking_beacon
 	var/display_name					 // Display name of the docking beacon, editable on the docking control program.
 	var/list/permitted_shuttles = list() // Shuttles that are always permitted by the docking beacon.
-	
+
 	var/locked = TRUE
 	var/docking_by_codes = FALSE		 // Whether or not docking by code is permitted.
 	var/docking_codes = 0				 // Required code for docking by code.
@@ -43,10 +43,10 @@
 			to_chat(user, SPAN_WARNING("The bolts on \the [src] are locked!"))
 			return
 		playsound(loc, 'sound/items/Ratchet.ogg', 100, 1)
-		to_chat(user, SPAN_NOTICE("You [anchored ? "unanchor" : "anchor"] \the [src]."))
+		to_chat(user, SPAN_NOTICE("You [anchored ? "un" : ""]anchor \the [src]."))
 		anchored = !anchored
 		return
-	
+
 	. = ..()
 
 /obj/machinery/docking_beacon/interface_interact(mob/user)
@@ -75,7 +75,7 @@
 	. = ..()
 	if(.)
 		return
-	
+
 	var/datum/extension/network_device/D = get_extension(src, /datum/extension/network_device)
 
 	if(href_list["edit_codes"])
@@ -111,7 +111,7 @@
 
 	if(href_list["toggle_lock"])
 		locked = !locked
-		D?.add_log("Docking was [locked ? "locked" : "unlocked"] for Docking Beacon [display_name].")
+		D?.add_log("Docking was [locked ? "" : "un"]locked for Docking Beacon [display_name].")
 		return TOPIC_REFRESH
 
 	if(href_list["toggle_codes"])

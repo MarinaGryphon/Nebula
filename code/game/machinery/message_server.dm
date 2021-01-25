@@ -111,7 +111,7 @@
 /obj/machinery/network/message_server/interface_interact(mob/user)
 	if(!CanInteract(user, DefaultTopicState()))
 		return FALSE
-	to_chat(user, "You toggle PDA message passing from [active ? "On" : "Off"] to [active ? "Off" : "On"]")
+	to_chat(user, "You toggle PDA message passing from [active ? "On to Off" : "Off to On"].")
 	active = !active
 	power_failure = 0
 	update_icon()

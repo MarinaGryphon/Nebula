@@ -159,8 +159,8 @@
 	if(isWrench(W))
 		playsound(src.loc, 'sound/items/Ratchet.ogg', 75, 1)
 		anchored = !anchored
-		user.visible_message("[user.name] [anchored ? "secures" : "unsecures"] the bolts holding [src.name] to the floor.", \
-					"You [anchored ? "secure" : "unsecure"] the bolts holding [src] to the floor.", \
+		user.visible_message("[user.name] [anchored ? "" : "un"]secures the bolts holding [src.name] to the floor.", \
+					"You [anchored ? "" : "un"]secure the bolts holding [src] to the floor.", \
 					"You hear a ratchet")
 		update_use_power(anchored)
 		if(anchored) // Powernet connection stuff.

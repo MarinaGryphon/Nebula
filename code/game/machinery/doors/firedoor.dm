@@ -200,8 +200,8 @@
 			if(do_after(user, 2 SECONDS, src))
 				if(!W.isOn()) return
 				blocked = !blocked
-				user.visible_message("<span class='danger'>\The [user] [blocked ? "welds" : "unwelds"] \the [src] with \a [W].</span>",\
-				"You [blocked ? "weld" : "unweld"] \the [src] with \the [W].",\
+				user.visible_message("<span class='danger'>\The [user] [blocked ? "" : "un"]welds \the [src] with \a [W].</span>",\
+				"You [blocked ? "" : "un"]weld \the [src] with \the [W].",\
 				"You hear something being welded.")
 				playsound(src, 'sound/items/Welder.ogg', 100, 1)
 				update_icon()

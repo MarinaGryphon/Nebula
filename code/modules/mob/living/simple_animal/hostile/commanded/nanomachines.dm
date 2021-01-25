@@ -96,6 +96,6 @@
 			emergency_protocols = 1
 			return 1
 		if(findtext(text,"check"))
-			src.say("EMERGENCY PROTOCOLS [emergency_protocols ? "ACTIVATED" : "DEACTIVATED"].")
+			src.say("EMERGENCY PROTOCOLS [emergency_protocols ? "" : "DE"]ACTIVATED.")
 			return 1
 	return 0

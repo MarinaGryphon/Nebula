@@ -566,7 +566,7 @@ var/list/ai_verbs_default = list(
 		return
 
 	camera_light_on = !camera_light_on
-	to_chat(src, "Camera lights [camera_light_on ? "activated" : "deactivated"].")
+	to_chat(src, "Camera lights [camera_light_on ? "" : "de"]activated.")
 	if(!camera_light_on)
 		if(camera)
 			camera.set_light(0)
@@ -655,7 +655,7 @@ var/list/ai_verbs_default = list(
 	set desc = "Toggles hologram movement based on moving with your virtual eye."
 
 	hologram_follow = !hologram_follow
-	to_chat(usr, "<span class='info'>Your hologram will now [hologram_follow ? "follow" : "no longer follow"] you.</span>")
+	to_chat(usr, "<span class='info'>Your hologram will now [hologram_follow ? "" : "no longer "]follow you.</span>")
 
 /mob/living/silicon/ai/proc/check_unable(var/flags = 0, var/feedback = 1)
 	if(stat == DEAD)

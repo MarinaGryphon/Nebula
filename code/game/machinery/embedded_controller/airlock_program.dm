@@ -395,7 +395,7 @@ send an additional command to open the door again.
 		if(secure)
 			.["lock"] = TRUE
 	else if(locked ^ !!secure) // don't need to open, but do need to toggle lock state
-		.[secure ? "lock" : "unlock"] = TRUE
+		.[secure ? "" : "un"]lock = TRUE
 
 	if(length(.))
 		signalDoor(doorTag, .)

@@ -32,7 +32,7 @@
 	else // trying to unlock the interface
 		if(allowed(user))
 			locked = !locked
-			to_chat(user, "You [ locked ? "lock" : "unlock"] the device.")
+			to_chat(user, "You [locked ? "" : "un"]lock the device.")
 			if (locked)
 				if (user.machine==src)
 					user.unset_machine()

@@ -763,7 +763,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 			user.client.pixel_x = -viewoffset
 			user.client.pixel_y = 0
 
-	user.visible_message("\The [user] peers through [zoomdevicename ? "the [zoomdevicename] of [src]" : "[src]"].")
+	user.visible_message("\The [user] peers through [zoomdevicename ? "the [zoomdevicename] of " : ""][src].")
 
 	GLOB.destroyed_event.register(src, src, /obj/item/proc/unzoom)
 	GLOB.moved_event.register(src, src, /obj/item/proc/unzoom)

@@ -389,7 +389,7 @@ var/list/solars_list = list()
 		if(2)
 			t += "<A href='?src=\ref[src];track=0'>Off</A> <A href='?src=\ref[src];track=1'>Timed</A> <span class='linkOn'>Auto</span><BR>"
 
-	t += "Tracking Rate: [rate_control(src,"tdir","[trackrate] deg/h ([trackrate<0 ? "CCW" : "CW"])",1,30,180)]</div><BR>"
+	t += "Tracking Rate: [rate_control(src,"tdir","[trackrate] deg/h ([trackrate<0 ? "C" : ""]CW)",1,30,180)]</div><BR>"
 
 	t += "<B><span class='highlight'>Connected devices:</span></B><div class='statusDisplay'>"
 

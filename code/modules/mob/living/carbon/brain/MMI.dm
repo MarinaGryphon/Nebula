@@ -72,7 +72,7 @@
 	if((istype(O,/obj/item/card/id)||istype(O,/obj/item/modular_computer)) && brainmob)
 		if(allowed(user))
 			locked = !locked
-			to_chat(user, "<span class='notice'>You [locked ? "lock" : "unlock"] the brain holder.</span>")
+			to_chat(user, "<span class='notice'>You [locked ? "" : "un"]lock the brain holder.</span>")
 		else
 			to_chat(user, "<span class='warning'>Access denied.</span>")
 		return

@@ -2025,7 +2025,7 @@ mob/living/silicon/ai/can_centcom_reply()
 	return list()
 
 /atom/movable/extra_admin_link(var/source, var/prefix, var/sufix, var/short_links)
-	return list("<A HREF='?[source];adminplayerobservefollow=\ref[src]'>[prefix][short_links ? "J" : "JMP"][sufix]</A>")
+	return list("<A HREF='?[source];adminplayerobservefollow=\ref[src]'>[prefix]J[short_links ? "" : "MP"][sufix]</A>")
 
 /client/extra_admin_link(source, var/prefix, var/sufix, var/short_links)
 	return mob ? mob.extra_admin_link(source, prefix, sufix, short_links) : list()
@@ -2033,12 +2033,12 @@ mob/living/silicon/ai/can_centcom_reply()
 /mob/extra_admin_link(var/source, var/prefix, var/sufix, var/short_links)
 	. = ..()
 	if(client && eyeobj)
-		. += "<A HREF='?[source];adminplayerobservefollow=\ref[eyeobj]'>[prefix][short_links ? "E" : "EYE"][sufix]</A>"
+		. += "<A HREF='?[source];adminplayerobservefollow=\ref[eyeobj]'>[prefix]E[short_links ? "" : "YE"][sufix]</A>"
 
 /mob/observer/ghost/extra_admin_link(var/source, var/prefix, var/sufix, var/short_links)
 	. = ..()
 	if(mind && (mind.current && !isghost(mind.current)))
-		. += "<A HREF='?[source];adminplayerobservefollow=\ref[mind.current]'>[prefix][short_links ? "B" : "BDY"][sufix]</A>"
+		. += "<A HREF='?[source];adminplayerobservefollow=\ref[mind.current]'>[prefix]B[short_links ? "" : "DY"][sufix]</A>"
 
 /proc/admin_jump_link(var/datum/target, var/source, var/delimiter = "|", var/prefix, var/sufix, var/short_links)
 	if(!istype(target))

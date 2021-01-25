@@ -350,7 +350,7 @@
 
 		if(allowed(usr))
 			locked = !locked
-			to_chat(usr, "You [locked ? "lock" : "unlock"] [src].")
+			to_chat(usr, "You [locked ? "" : "un"]lock [src].")
 		else
 			to_chat(usr, FEEDBACK_ACCESS_DENIED)
 

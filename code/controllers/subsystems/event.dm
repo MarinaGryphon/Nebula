@@ -61,7 +61,7 @@ SUBSYSTEM_DEF(event)
 	while (pos <= EVENT_LEVEL_MAJOR)
 		event_containers[pos].process()
 		pos++
-		
+
 		if (MC_TICK_CHECK)
 			return
 
@@ -117,7 +117,7 @@ SUBSYSTEM_DEF(event)
 
 		to_world(message)
 
-//Event manager UI 
+//Event manager UI
 /datum/controller/subsystem/event/proc/GetInteractWindow()
 	var/html = "<A align='right' href='?src=\ref[src];refresh=1'>Refresh</A>"
 	html += "<A align='right' href='?src=\ref[src];pause_all=[!config.allow_random_events]'>Pause All - [config.allow_random_events ? "Pause" : "Resume"]</A>"
@@ -294,7 +294,7 @@ SUBSYSTEM_DEF(event)
 		var/datum/event_meta/EM = locate(href_list["toggle_oneshot"])
 		EM.one_shot = !EM.one_shot
 		if(EM != new_event)
-			log_and_message_admins("has [EM.one_shot ? "set" : "unset"] the oneshot flag for the [severity_to_string[EM.severity]] event '[EM.name]'.")
+			log_and_message_admins("has [EM.one_shot ? "" : "un"]set the oneshot flag for the [severity_to_string[EM.severity]] event '[EM.name]'.")
 	else if(href_list["toggle_enabled"])
 		var/datum/event_meta/EM = locate(href_list["toggle_enabled"])
 		EM.enabled = !EM.enabled

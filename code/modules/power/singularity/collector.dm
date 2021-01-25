@@ -116,7 +116,7 @@ var/global/list/rad_collectors = list()
 				return 1
 		playsound(src.loc, 'sound/items/Ratchet.ogg', 75, 1)
 		src.anchored = !src.anchored
-		user.visible_message("[user.name] [anchored? "secures":"unsecures"] the [src.name].", \
+		user.visible_message("[user.name] [anchored ? "" : "un"]secures the [src.name].", \
 			"You [anchored? "secure":"undo"] the external bolts.", \
 			"You hear a ratchet")
 		if(anchored && !(stat & BROKEN))
@@ -128,7 +128,7 @@ var/global/list/rad_collectors = list()
 		if (src.allowed(user))
 			if(active)
 				src.locked = !src.locked
-				to_chat(user, "The controls are now [src.locked ? "locked." : "unlocked."]")
+				to_chat(user, "The controls are now [src.locked ? "" : "un"]locked.")
 			else
 				src.locked = 0 //just in case it somehow gets locked
 				to_chat(user, "<span class='warning'>The controls can only be locked when the [src] is active</span>")

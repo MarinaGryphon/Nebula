@@ -27,7 +27,7 @@
 			return
 
 		locked = !locked
-		to_chat(user, "You [locked ? "lock" : "unlock"] \the [src] access panel.")
+		to_chat(user, "You [locked ? "" : "un"]lock \the [src] access panel.")
 		return
 
 	else if(isCrowbar(W))

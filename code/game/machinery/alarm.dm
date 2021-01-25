@@ -772,7 +772,7 @@
 		if (istype(W, /obj/item/card/id) || istype(W, /obj/item/modular_computer))// trying to unlock the interface with an ID card
 			if(allowed(user) && !wires.IsIndexCut(AALARM_WIRE_IDSCAN))
 				locked = !locked
-				to_chat(user, "<span class='notice'>You [ locked ? "lock" : "unlock"] the Air Alarm interface.</span>")
+				to_chat(user, "<span class='notice'>You [locked ? "" : "un"]lock the Air Alarm interface.</span>")
 			else
 				to_chat(user, "<span class='warning'>Access denied.</span>")
 			return TRUE
